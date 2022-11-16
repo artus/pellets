@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Pellets</title>
+  <script src="./js/code.js" defer></script>
+</head>
+<body>
+  <header>
+    <img alt="logo" src="./img/logo.png">
+    <h1>Pellet usage tracker</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Add consumption</h2>
+      <form>
+        <label for="bags-input">Bags:</label>
+        <input id="bags-input" type="number" min="1" value="1" required>
+
+        <label for="weight-input">Weight:</label>
+        <input id="weight-input" type="number" min="1" value="15" required>
+
+        <label for="date-input">Date:</label>
+        <input id="date-input" type="date" required>
+
+        <button id="form-submit">Save!</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Consumption history</h2>
+      <div id="consumptions"></div>
+    </section>
+
+  </main>
+  <footer>&copy; Artus Vranken 2022</footer>
+</body>
+</html>

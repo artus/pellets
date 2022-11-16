@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --padding-small: 1rem;
+  --padding-medium: 2rem;
+  --padding-big: 3rem;
+}
+
+body,
+html {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  border-bottom: 1px solid lightgray;
+  padding: var(--padding-medium);
+  box-shadow: 0px 10px 23px -14px rgba(122, 122, 122, 1);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header img {
+  width: 4rem;
+}
+
+footer {
+  border-top: 1px solid lightgray;
+  padding: var(--padding-medium);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  background-color: #F3F5F7;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-big) var(--padding-medium);
+  align-items: flex-start;
+}
+
+main section {
+  background-color: white;
+  border-radius: 15px;
+  padding: var(--padding-medium);
+  box-shadow: 10px 10px 19px -8px rgba(0,0,0,0.75);
+  margin-bottom: var(--padding-big);
+}
+
+main section:last-of-type {
+  align-self: stretch;
+}
+
+#error {
+  background-color: firebrick;
+  color: white;
+  font-weight: bold;
+  padding: var(--padding-small);
+}
+
+main section form {
+  display: grid;
+  grid-template-columns: 5rem 15rem;
+  gap: 1rem;
+}
+
+main section form button {
+  grid-column: span 2;
+  background-color: dodgerblue;
+  border: 0;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+main section form button:hover {
+  background-color: rgb(92, 173, 255);
+}
+
+main section form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+main section form input {
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 0.5rem;
+}
+
+main section > * {
+  margin-bottom: var(--padding-small);
+}
+
+main section *:last-child {
+  margin: 0;
+}
+
+.consumption-id {
+  color: gray;
+}
+
+#consumptions {
+  border: 1px solid rgb(236, 236, 236);
+  border-radius: 5px;
+  overflow-x: scroll;
+}
+
+#consumptions div {
+  min-width: 60rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+#consumptions div:nth-child(even) {
+  background-color: rgb(236, 236, 236);
+}
+
+#consumptions div p {
+  padding: 0.5em;
+}
+
+#consumptions div:first-of-type {
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+}
+
+#no-consumptions {
+  grid-column: span 5;
+}
